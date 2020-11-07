@@ -1,12 +1,16 @@
 package jay.kotlin.projects.happyplaces.adapters
 
+import android.app.Activity
 import android.content.Context
+import android.content.Intent
 import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import jay.kotlin.projects.happyplaces.R
+import jay.kotlin.projects.happyplaces.activities.AddHappyPlaceActivity
+import jay.kotlin.projects.happyplaces.activities.MainActivity
 import jay.kotlin.projects.happyplaces.database.DatabaseHandler
 import jay.kotlin.projects.happyplaces.models.HappyPlaceModel
 import kotlinx.android.synthetic.main.item_happy_place.view.*
@@ -48,16 +52,12 @@ open class HappyPlacesAdapter(private val context: Context, private var list: Ar
         return list.size
     }
 
-    /*fun notifyEditItem(activity: Activity, position: Int, requestCode: Int) {
+    fun notifyEditItem(activity: Activity, position: Int, requestCode: Int) {
         val intent = Intent(context, AddHappyPlaceActivity::class.java)
         intent.putExtra(MainActivity.EXTRA_PLACE_DETAILS, list[position])
-        activity.startActivityForResult(
-                intent,
-                requestCode
-        ) // Activity is started with requestCode
-
-        notifyItemChanged(position) // Notify any registered observers that the item at position has changed.
-    }*/
+        activity.startActivityForResult(intent, requestCode)
+        notifyItemChanged(position)
+    }
 
     fun removeAt(position: Int) {
 
