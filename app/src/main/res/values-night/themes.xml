@@ -21,4 +21,10 @@
         <item name="colorOnPrimary">@color/white</item>
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
     </style>
+
+    <style name="CustomToolbarStyle" >
+        <!-- Customize your theme here. -->
+        <item name="android:textColorPrimary">#FFFFFF</item>
+        <item name="android:colorControlNormal">#FFFFFF</item>
+    </style>
 </resources>
